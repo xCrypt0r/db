@@ -22,7 +22,7 @@ self.onmessage = function (e) {
                     lastCharacterPhonemes: record[8],
                 })),
             firstCharacterfrequency: getFrequency(DB, true),
-            lastCharacterfrequency: getFrequency(DB, false);
+            lastCharacterfrequency: getFrequency(DB, false)
         });
     }
 };

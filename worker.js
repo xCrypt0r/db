@@ -38,3 +38,15 @@ self.onmessage = function (e) {
             });
     }
 };
+
+function getFrequency(db, first = true) {
+    const freq = {};
+
+    for (let i = 0; i < db.length; i++) {
+        const word = db[i].word;
+        const char = first ? word[0] : word[word.length - 1];
+        freq[char] = (freq[char] || 0) + 1;
+    }
+
+    return freq;
+}
